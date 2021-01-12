@@ -1,0 +1,13 @@
+*.txt
+
+# Java
+*.class
+*.jar
+
+# Idea
+.idea
+*.iml
+*.iws
+*.ipr
+*.ts
+
