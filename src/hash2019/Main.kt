@@ -84,7 +84,7 @@ fun main(args: Array<String>) {
             }
         }
 
-        val find = list.minWith((Comparator { photo1, photo2 ->
+        val find = list.minWithOrNull((Comparator { photo1, photo2 ->
             val photo1Score = Math.min(Math.min((slideShow.getLastTags() - photo1.tags).size, slideShow.getLastTags().intersect(photo1.tags).size), (photo1.tags - slideShow.getLastTags()).size)
             val photo2Score = Math.min(Math.min((slideShow.getLastTags() - photo2.tags).size, slideShow.getLastTags().intersect(photo2.tags).size), (photo2.tags - slideShow.getLastTags()).size)
             photo2Score.compareTo(photo1Score)
